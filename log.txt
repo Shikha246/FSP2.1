@@ -1,0 +1,7 @@
+[2026-05-29 14:32:10] INFO  : Server started successfully on port 5000
+[2026-05-29 14:32:15] INFO  : Database connected successfully
+[2026-05-29 14:33:01] WARN  : Invalid login attempt detected
+[2026-05-29 14:33:45] ERROR : Failed to fetch user profile data
+[2026-05-29 14:34:12] INFO  : User logged out successfullyNew log entry:Data appended at 2:00PM
+
+[TAG:INFO]New log entry:Data appended at 2:00PM
