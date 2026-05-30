@@ -1,5 +1,8 @@
 require("dotenv").config();
 const fs = require("fs");
+
+const logError = require("../errorLogger.js");
+
 const path = process.env.FILE_PATH;
 function checkAndCreateFile(filePath){
     if(!filePath){
@@ -9,8 +12,11 @@ function checkAndCreateFile(filePath){
     fs.access(filePath,fs.constants.F_OK,(err)=>{
         if(err){
             fs.writeFile(filePath,"Sample Text" , (writeErr)=>{
-                if(writeErr)  throw writeErr;
+                if(writeErr) {
+                    logError(`Error creating file ${writeErr}`);
+                }else{
                 console.log("File created");
+                }
             });
 
         }else{
